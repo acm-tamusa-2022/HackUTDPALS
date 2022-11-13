@@ -1,8 +1,9 @@
 /* Style the navigation bar */
 .navbar {
     width: 100%;
-    background-color: rgb(199,138,78);
+    background-color: rgb(190, 216, 231);
     overflow: auto;
+    position: fixed;
   }
   
   /* Navbar links */
@@ -10,9 +11,9 @@
     float: right;
     text-align: center;
     padding: 22px;
-    color: rgb(105, 24, 24);
+    color: rgb(15, 3, 3);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 27px;
   }
   
   /* Navbar links on mouse-over */
@@ -22,7 +23,7 @@
   
   /* Current/active navbar link */
   .active {
-    background-color: rgb(199,138,78);
+    background-color: rgb(190, 216, 231);
   }
   
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
