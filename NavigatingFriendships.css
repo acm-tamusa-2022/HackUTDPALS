@@ -1,14 +1,13 @@
-body{
-    background: #777;
-    height: 300vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
-  }
-  .container {
-    display: flex;
-  }
-  .card {
-    background: white;
-    border-radius: 1rem;
-  }
+nav {
+  padding-top: 30px;
+  height: 180px;
+  line-height: 180px;;
+  text-align: center;
+  background-color: whitesmoke;
+}
+.card {
+  background: white;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+}

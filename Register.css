@@ -1,0 +1,25 @@
+nav {
+  padding-top: 10px;
+  height: 90px;
+  line-height: 50px;;
+  text-align: center;
+  background-color: whitesmoke;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  background: #f7fafa;
+}
+.title{
+    font-size: 95;
+    box-sizing:border-box;
+    background: lavenderblush;
+    text-align: center;
+    padding: 1px;
+    border-radius: 50px;
+}
+.table {
+  box-sizing: border-box;
+  font-size: 60px;
+  align-items: center;
+}
