@@ -1,34 +1,30 @@
-<<<<<<< Updated upstream
-nav {
-  padding-top: 30px;
+.nav {
+  padding-top: 50px;
   height: 180px;
   line-height: 180px;;
   text-align: center;
-  background-color: whitesmoke;
+  
+  font-size: 140px;
+
+ 
 }
+.container{
+  width: 100%;
+}
+
+
 .card {
   background: white;
   box-sizing: border-box;
   width: auto;
   height: auto;
 }
-=======
-body{
-    background: #777;
-    
-    margin: 0;
-   
-    
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
     
-  }
-  .card {
-    background: white;
-    border-radius: 1rem;
-  }
->>>>>>> Stashed changes
+    .navbar {
+      width: 100%;
+      background-color: rgb(190, 216, 231);
+      overflow: auto;
+      position: fixed;
+    }
+    
