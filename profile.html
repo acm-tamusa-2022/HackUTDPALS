@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="styleesheet" href="profile.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,32 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
 <body>
+
+    <figure class="text-center">
+        <h1 class="display-3">About Me</h1>
+        <!--line deco-->
+        <hr class="hr-bold w-50">
+    </figure>
+    <div class="container">
+        <label>First Name</label>
+        <input type="text" id="name"> 
+        <label>Email</label>
+        <input type="text" id="email"> 
+        
+        
+
+
+    </div>
  
-<input type="text" id="email"> 
-<input type="text" id="first"> 
-
-
-
+<div id="root"></div>
   
-<div>
-    <label><input type="checkbox" value="orange">Orange</label>
-    <label><input type="checkbox" value="apple">Apple</label>
-    <label><input type="checkbox" value="mango">Mango</label>
-    <label><input type="checkbox" value="kiwi">Kiwi</label>
-    <button>Show</button>
-    <h1>Result</h1>
-</div>
+
 
 
 
 <button id="send">send</button>
 
-<script src="script.js"></script>
+
 
     <script >
         
@@ -50,15 +56,28 @@
             const email=document.getElementById('email').value;
             firebaseRef.push(email)
 
+            firebaseRef.on("value", function(snapshot){
+                snapshot.forEach(function(element){
+                    document.querySelector('#root').innerHTML+=`<div>${element.val()}</div>`
+                    console.log(element.val())
+                })
+            })
+
 
 
        
         })
 
-        var firebaseReff=firebase.database().ref('first');
+        var firebaseReff=firebase.database().ref('name');
         document.querySelector('#send').addEventListener('click', ()=>{
-            const first=document.getElementById('first').value;
+            const first=document.getElementById('name').value;
             firebaseReff.push(first)
+
+            firebaseReff.on("value", function(snapshot){
+                snapshot.forEach(function(element){
+                    console.log(element.val())
+                })
+            })
 
         });
 
@@ -78,8 +97,53 @@
         });
             }
         }
+        function addItems(Name, Email, Location, Interests, Hobbies, book){
+            var ul=document.getElementById("list")
+            var header=document.createElement('h2')
+            var _name=document.createElement("li")
+            var _email=document.createElement("li")
+            var _location=document.createElement("li")
+            var _interests=document.createElement("li")
+            var _hobbies=document.createElement("li")
+            var _book=document.createElement("li")
+
+            _name.innerHTML="Name: " + Name;
+            _email.innerHTML="Email:" + Email;
+            _location.innerHTML="Location"+ Location
+            _interests.innerHTML="Interests"+ Interests
+            _hobbies.innerHTML="Hobbies"+ Hobbies
+            _book.innerHTML="Favorite Book" + book
+
+
+
+            ul.appendChild(header)
+            ul.appendChild(_name)
+            ul.appendChild(_email)
+            ul.appendChild(_location)
+            ul.appendChild(_interests)
+            ul.appendChild(_book)
+            ul.appendChild(_hobbies) 
+
+            function fetchdata(){
+                firebase.database().ref('student').once('value',function(snapshot){
+                    snapshot.forEach(
+                        function(childsnapshot){
+                            let name=childsnapshot.val().NameOfStudent
+                            let email=childsnapshot.val().NameOfStudent
+                            let Location=childsnapshot.val().NameOfStudent
+                            let Interests=childsnapshot.val().NameOfStudent
+                            let Hobbies=childsnapshot.val().NameOfStudent
+                            let book=childsnapshot.val().NameOfStudent
+                            addItems(name,email,location,book, Interests,Hobbies)
+                        }
+                    )
+                }
+                )
+            }}
+
         
-         
+        
+         window.onload(fetchdata())
        
       </script>
 </body>
