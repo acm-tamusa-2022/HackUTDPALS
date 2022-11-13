@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  
+  background: #f7fafa;
+}
+.title{
+    font-size: 70px;
+    background: rgb(190, 169, 248);
+    width: calc(33% - 10px);
+    height: calc(75% - 10px);
+    padding: 40px;
+    border-radius: 1px;
+}
+.table {
+    font-size: 60px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
