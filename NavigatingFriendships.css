@@ -1,0 +1,14 @@
+body{
+    background: #777;
+    height: 300vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    display: flex;
+  }
+  .card {
+    background: white;
+    border-radius: 1rem;
+  }
