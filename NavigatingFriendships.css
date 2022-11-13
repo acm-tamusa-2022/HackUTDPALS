@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 nav {
   padding-top: 30px;
   height: 180px;
@@ -11,3 +12,23 @@ nav {
   width: auto;
   height: auto;
 }
+=======
+body{
+    background: #777;
+    
+    margin: 0;
+   
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    
+  }
+  .card {
+    background: white;
+    border-radius: 1rem;
+  }
+>>>>>>> Stashed changes
