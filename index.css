@@ -1,0 +1,35 @@
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: rgb(190, 216, 231);
+    overflow: auto;
+    position: fixed;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: right;
+    text-align: center;
+    padding: 22px;
+    color: rgb(15, 3, 3);
+    text-decoration: none;
+    font-size: 27px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: rgb(190, 216, 231);
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
