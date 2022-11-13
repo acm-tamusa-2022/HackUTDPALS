@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+ 
+<input type="text" id="email"> 
+<input type="text" id="first"> 
+
+
+
+  
+<div>
+    <label><input type="checkbox" value="orange">Orange</label>
+    <label><input type="checkbox" value="apple">Apple</label>
+    <label><input type="checkbox" value="mango">Mango</label>
+    <label><input type="checkbox" value="kiwi">Kiwi</label>
+    <button>Show</button>
+    <h1>Result</h1>
+</div>
+
+
+
+<button id="send">send</button>
+
+<script src="script.js"></script>
+
+    <script >
+        
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCI9XvhLghrDivgIldpxyYu41EROcwv-VQ",
+          authDomain: "pals-df506.firebaseapp.com",
+          projectId: "pals-df506",
+          storageBucket: "pals-df506.appspot.com",
+          messagingSenderId: "114274034605",
+          appId: "1:114274034605:web:e03de274746dbc23f0b724"
+        };
+      
+        // Initialize Firebase
+       firebase.initializeApp(firebaseConfig);
+       var firebaseRef=firebase.database().ref('emails');
+        document.querySelector('#send').addEventListener('click', ()=>{
+            const email=document.getElementById('email').value;
+            firebaseRef.push(email)
+
+
+
+       
+        })
+
+        var firebaseReff=firebase.database().ref('first');
+        document.querySelector('#send').addEventListener('click', ()=>{
+            const first=document.getElementById('first').value;
+            firebaseReff.push(first)
+
+        });
+
+       
+        function displayRadioValue() {
+            var ele = document.getElementsByName('gender');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                
+
+                        var firebaseReff3=firebase.database().ref('points');
+        document.querySelector('#send1').addEventListener('click', ()=>{
+            const tests=document.getElementById("points").value;
+            firebaseReff3.push(tests)
+
+        });
+            }
+        }
+        
+         
+       
+      </script>
+</body>
+</html>
